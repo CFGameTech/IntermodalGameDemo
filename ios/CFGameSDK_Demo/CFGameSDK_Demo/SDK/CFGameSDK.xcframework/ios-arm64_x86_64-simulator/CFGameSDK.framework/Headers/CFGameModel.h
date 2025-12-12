@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,43 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 // 游戏地址
 @property (nonatomic,copy) NSString *g_url;
 
-@end
-
-
-@interface CFGameAudioInfo : NSObject
-
-// 音频路径
-@property (nonatomic,copy) NSString *url;
-// 音频名称
-@property (nonatomic,copy) NSString *name;
-// 音频格式
-@property (nonatomic,copy) NSString *type;
-
-
 
 @end
 
 
-
-
-@interface CFGameInitSDKModel : NSObject
-
-//  当前application
-@property (nonatomic, nonnull) UIApplication *app;
-//  创发提供的appId
-@property (nonatomic,copy,nonnull) NSString *appId;
-//  游戏语言
-@property (nonatomic,copy,nonnull) NSString *language;
-//  发布地区
-@property (nonatomic,copy,nonnull) NSString *area;
-
-@property (nonatomic,assign) BOOL isProduct;
-
-@property (nonatomic,assign) BOOL isGameSoundPlay;
-;
-
-
-@end
 
 
 

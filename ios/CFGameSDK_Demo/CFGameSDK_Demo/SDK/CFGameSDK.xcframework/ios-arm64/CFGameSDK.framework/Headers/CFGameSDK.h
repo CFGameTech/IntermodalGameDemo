@@ -10,7 +10,6 @@
 #import <UIKit/UIKit.h>
 #import <CFGameSDK/CFGameSDKStateDefines.h>
 
-
 typedef struct {
     CGFloat top;
     CGFloat left;
@@ -27,7 +26,7 @@ typedef enum : NSUInteger {
 
 typedef void(^GetGameListSuccessBlk)(NSArray<CFGameModel *> * __nonnull gameList);
 typedef void(^GetGameListFailureBlk)(int code ,NSString * __nonnull msg);
-typedef void(^GetGameAudioList)(NSArray * _Nullable audioList);
+
 
 @protocol CFGameSDKDelegate <NSObject>
 
@@ -64,11 +63,12 @@ typedef void(^GetGameAudioList)(NSArray * _Nullable audioList);
  */
 - (void)openChargePage;
 
-
 /**
     打开商城回调
  */
 - (void)openPlatformPage:(NSString *_Nonnull)path data:(NSString *_Nullable)data;
+
+
 
 
 /**
@@ -245,16 +245,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)cfGameSDKLog:(void(^)(NSString *logMsg))handler;
 
 
-
-
 /*
  *  @param app : UIApplication 当前application
  *  @param appId : 创发提供的appId
+ *  @param appKey : 创发提供的appKey
  */
 +(void)setUpSDKWithApplication:(UIApplication *)app appId:(NSString *)appId language:(NSString *)language area:(NSString *)area isProduct:(BOOL)isProduct;
-
-
-+(void)setUpSDKWithModel:(CFGameInitSDKModel *)model;
 
 
 /*
@@ -285,12 +281,6 @@ NS_ASSUME_NONNULL_BEGIN
     游戏预加载加载取消
  */
 +(void)cancelPreloadGame:(NSArray<NSNumber *> *)arr;
-
-
-/*
- *  获取游戏列表
- */
-+(void)getGameAudioList:(int)gid callback:(GetGameAudioList)callback;
 
 /*
  *  加载半屏游戏
@@ -459,17 +449,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)sdkVersion;
 
-
-/*
- *   是否允许SDK控制Category
- */
-- (void)setEnableAudioSessionCategory:(BOOL)enable;
-
-
-/*
- *  是否允许SDK控制Session
- */
-- (void)setEnableAudioSessionActive:(BOOL)enable;
 
 @end
 

@@ -52,6 +52,16 @@ var cf_game={
             console.log("sdk openChargePage");
             CFGameOpenApi.openChargePage.postMessage(invokeId);
         },
+        openPlatformPage: function (path,dataStr) {
+            console.log("sdk openPlatformPage");
+            var message = {
+                data:{
+                    path:path,
+                    dataStr:dataStr
+                }
+            };
+            CFGameOpenApi.openPlatformPage.postMessage(message);
+        },
 
         closeGamePage: function () {
             var invokeId = getInvokeId();
@@ -207,15 +217,7 @@ var cf_game={
                 }
             };
             CFGameLife.gameSendScreenshot.postMessage(message);
-        },
-//        appHide(){
-//            console.log("sdk appHide");
-//            CFGameLife.appHide.postMessage("success");
-//        },
-//        appShow(){
-//            console.log("sdk appShow");
-//            CFGameLife.appShow.postMessage("success");
-//        }
+        }
 
     }
 };
