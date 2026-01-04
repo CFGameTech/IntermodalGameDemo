@@ -26,6 +26,7 @@ typedef enum : NSUInteger {
 
 typedef void(^GetGameListSuccessBlk)(NSArray<CFGameModel *> * __nonnull gameList);
 typedef void(^GetGameListFailureBlk)(int code ,NSString * __nonnull msg);
+typedef void(^GameConfigCallBack)(NSString * _Nullable dataJson);
 
 
 @protocol CFGameSDKDelegate <NSObject>
@@ -75,6 +76,17 @@ typedef void(^GetGameListFailureBlk)(int code ,NSString * __nonnull msg);
  *  游戏预加载成功返回游戏id
  */
 - (void)onPreLoadGameSuccess:(NSInteger)gid gameState:(GameState)state;
+
+
+/**
+ *
+ *
+ */
+- (void)onGetGameConfig:(NSString *_Nullable)dataJson cfgCallback:(GameConfigCallBack _Nonnull )callback;
+
+
+
+
 
 /**
     设置统计上报回调
