@@ -33,7 +33,7 @@ var cf_game={
     },
     OpenApi:{
         getBaseInfo: function (callback,dataJson) {
-                console.log("sdk getBaseInfo");
+                console.log("sdk getBaseInfo 443");
                 console.log(window.webkit.messageHandlers);
                 var invokeId = getInvokeId();
                 cfgCallJsBacks[invokeId] = callback;
