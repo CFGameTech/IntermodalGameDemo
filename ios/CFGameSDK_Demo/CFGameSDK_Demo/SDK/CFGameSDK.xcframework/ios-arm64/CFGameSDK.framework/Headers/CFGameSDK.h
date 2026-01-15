@@ -76,6 +76,14 @@ typedef void(^GetGameAudioList)(NSArray * _Nullable audioList);
  */
 - (void)onPreLoadGameSuccess:(NSInteger)gid gameState:(GameState)state;
 
+
+/**
+ *
+ *
+ */
+- (NSString *_Nullable)onGetGameConfig:(NSString *_Nullable)dataJson;
+
+
 /**
     设置统计上报回调
  */
