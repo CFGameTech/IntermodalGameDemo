@@ -51,6 +51,14 @@ typedef void(^GetGameAudioList)(NSArray * _Nullable audioList);
  */
 - (CFGameEdgeInsets)onWindowSafeArea;
 
+
+/**
+ *
+ *  游戏参数配置接口
+ */
+- (NSString *_Nullable)onGetGameConfig:(NSString *_Nullable)dataJson;
+
+
 @optional
 
 /**
@@ -77,11 +85,6 @@ typedef void(^GetGameAudioList)(NSArray * _Nullable audioList);
 - (void)onPreLoadGameSuccess:(NSInteger)gid gameState:(GameState)state;
 
 
-/**
- *
- *
- */
-- (NSString *_Nullable)onGetGameConfig:(NSString *_Nullable)dataJson;
 
 
 /**
