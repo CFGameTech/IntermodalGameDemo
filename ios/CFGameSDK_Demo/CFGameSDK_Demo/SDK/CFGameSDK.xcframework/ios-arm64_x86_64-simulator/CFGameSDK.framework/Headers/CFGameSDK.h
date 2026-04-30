@@ -50,6 +50,14 @@ typedef void(^GetGameListFailureBlk)(int code ,NSString * __nonnull msg);
  */
 - (CFGameEdgeInsets)onWindowSafeArea;
 
+
+/**
+ *  
+ *      游戏参数自定义配置方法
+ */
+- (NSString *_Nullable)onGetGameConfig:(NSString *_Nullable)dataJson;
+
+
 @optional
 
 /**
@@ -76,12 +84,6 @@ typedef void(^GetGameListFailureBlk)(int code ,NSString * __nonnull msg);
  */
 - (void)onPreLoadGameSuccess:(NSInteger)gid gameState:(GameState)state;
 
-
-/**
- *
- *      游戏参数自定义配置方法
- */
-- (NSString *_Nullable)onGetGameConfig:(NSString *_Nullable)dataJson;
 
 
 
