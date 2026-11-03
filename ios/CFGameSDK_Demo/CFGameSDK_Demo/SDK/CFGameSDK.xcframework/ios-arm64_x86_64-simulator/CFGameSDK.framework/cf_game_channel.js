@@ -235,15 +235,6 @@ var cf_game={
             };
             CFGameLife.gameSendScreenshot.postMessage(message);
         },
-//        appHide(){
-//            console.log("sdk appHide");
-//            CFGameLife.appHide.postMessage("success");
-//        },
-//        appShow(){
-//            console.log("sdk appShow");
-//            CFGameLife.appShow.postMessage("success");
-//        }
-
     }
 };
 

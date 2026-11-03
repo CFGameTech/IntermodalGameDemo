@@ -5,10 +5,12 @@ plugins {
 android {
     compileSdk 32
 
+    namespace "com.cftech.gamesdk.demo"
+
     defaultConfig {
         applicationId "com.cftech.gamesdk.demo"
         minSdk 21
-        targetSdk 26
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 

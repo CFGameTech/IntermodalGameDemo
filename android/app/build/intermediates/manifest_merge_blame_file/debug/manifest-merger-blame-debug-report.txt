@@ -1,0 +1,74 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.cftech.gamesdk.demo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:7:5-79
+11-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:7:22-76
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:8:5-80
+12-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:8:22-77
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:9:5-81
+13-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:9:22-78
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:10:5-67
+14-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:10:22-64
+15
+16    <application
+16-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:6:5-26:19
+17        android:name="com.cftech.gamesdk.demo.BaseApplication"
+17-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:7:9-63
+18        android:allowBackup="true"
+18-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:8:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.5.0] /Users/yq_mac/.gradle/caches/transforms-3/031a6ab44a27a4b1a5807f5c3fc152a7/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+20        android:dataExtractionRules="@xml/data_extraction_rules"
+20-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:9:9-65
+21        android:debuggable="true"
+22        android:extractNativeLibs="true"
+23        android:fullBackupContent="@xml/backup_rules"
+23-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:10:9-54
+24        android:icon="@mipmap/ic_launcher"
+24-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:11:9-43
+25        android:label="@string/app_name"
+25-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:12:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:13:9-54
+27        android:supportsRtl="true"
+27-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:14:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.CFGameSDKDemo" >
+29-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:15:9-51
+30        <activity
+30-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:17:9-25:20
+31            android:name="com.cftech.gamesdk.demo.MainActivity"
+31-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:18:13-41
+32            android:exported="true" >
+32-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:19:13-36
+33            <intent-filter>
+33-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:20:13-24:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:21:17-69
+34-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:21:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:23:17-77
+36-->/Users/yq_mac/github/overseas/IntermodalGameDemo/android/app/src/main/AndroidManifest.xml:23:27-74
+37            </intent-filter>
+38        </activity>
+39        <activity
+39-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:14:9-16:75
+40            android:name="com.cftech.gamelibrary.view.act.CFGameActivity"
+40-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:15:13-74
+41            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+41-->[cfg_lib_v2.0.0.1.aar] /Users/yq_mac/.gradle/caches/transforms-3/dd0bd14ac4894f4cce16da98e2a6e297/transformed/cfg_lib_v2.0.0.1/AndroidManifest.xml:16:13-72
+42    </application>
+43
+44</manifest>

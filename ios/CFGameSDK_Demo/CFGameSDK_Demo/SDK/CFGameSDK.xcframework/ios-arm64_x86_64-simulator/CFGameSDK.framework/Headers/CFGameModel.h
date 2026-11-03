@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CFGameModel : NSObject
 
 // 游戏id
-@property (nonatomic,assign) NSInteger g_id;
+@property (nonatomic,assign) int g_id;
 // 游戏名称
 @property (nonatomic,copy) NSString *g_name;
 // 游戏icon
@@ -44,17 +44,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 //  当前application
 @property (nonatomic, nonnull) UIApplication *app;
-//  创发提供的appId
-@property (nonatomic,copy,nonnull) NSString *appId;
+//  appId
+@property (nonatomic, assign) int appId;
+//  appKey
+@property (nonatomic, copy, nonnull) NSString *appKey;
 //  游戏语言
 @property (nonatomic,copy,nonnull) NSString *language;
 //  发布地区
 @property (nonatomic,copy,nonnull) NSString *area;
-
+//  是否正式环境
 @property (nonatomic,assign) BOOL isProduct;
-
+//  是否需要播放游戏声音
 @property (nonatomic,assign) BOOL isGameSoundPlay;
-;
+
 
 
 @end

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.cftech.gamesdk.demo.app-mergeDebugResources-17:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/yq_mac/.gradle/caches/transforms-3/a2e5f01514509273e9b8bc0d3a8fd54c/transformed/material-1.4.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "75",
+                        "endOffsets": "126"
+                    }
+                }
+            ]
+        }
+    ]
+}
