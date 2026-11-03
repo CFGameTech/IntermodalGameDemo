@@ -5,11 +5,11 @@ target 'CFGameSDK_Demo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'AFNetworking'
-  pod 'Masonry'
-  pod 'YYModel'
-  pod 'SDWebImage'
-  pod 'SSZipArchive','~>2.1.4'
+#  pod 'AFNetworking'
+#  pod 'Masonry'
+#  pod 'YYModel'
+#  pod 'SDWebImage'
+#  pod 'SSZipArchive','~>2.1.4'
 
   # Pods for CFGameSDK_Demo
 

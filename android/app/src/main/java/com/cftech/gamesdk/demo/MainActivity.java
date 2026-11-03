@@ -24,34 +24,28 @@ public class MainActivity extends AppCompatActivity {
         setUpSDK();
 
 
-        findViewById(R.id.btnLogin).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CFGameSDK.setUserInfo("123456", "", new CFGameSDK.ICFLoginCallback() {
-                    @Override
-                    public void onLoginSuccess() {
-                        Log.i("MainActivity", "onLoginSuccess.");
-                        Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onLoginFail(int code, String msg) {
-                        Log.e("MainActivity", "onLoginFail.");
-                        Toast.makeText(MainActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onRefreshToken(String token) {
-                        Log.i("MainActivity", "onRefreshToken：" + token);
-                    }
-                });
-            }
-        });
-
         findViewById(R.id.btnShowGameList).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CFGameSDK.showGameListDialog(MainActivity.this);
+
+                String uid = ((EditText)findViewById(R.id.etUserId)).getText().toString();
+
+                if (uid == null){
+                    Toast.makeText(MainActivity.this, "请填写用户id", Toast.LENGTH_SHORT).show();
+                }
+
+
+                CFGameSDK.showGameListDialog(MainActivity.this, uid, "", new CFGameSDK.ICFSDKCallback() {
+                    @Override
+                    public void onSuccess() {
+                        Log.i("MainActivity", "show GameList Dialog success");
+                    }
+
+                    @Override
+                    public void onError(int i, String s) {
+                        Log.i("MainActivity", "show GameList Dialog fail");
+                    }
+                });
             }
         });
 
@@ -79,13 +73,23 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public CFGameSDK.CFRect onWindowSafeArea() {
-                return new CFGameSDK.CFRect(0, CFDensityUtil.dp2px(MainActivity.this, 200), 0, CFDensityUtil.dp2px(MainActivity.this, 280), 0.6f);
+                return new CFGameSDK.CFRect(0, 0, 0, 0, 0.6f);
             }
 
             @Override
             public void onGamePageClose() {
                 Log.i("MainActivity", "on Game Page Close.");
                 CFGameSDK.finishGameWindow();
+            }
+
+            @Override
+            public void openPlatformPage(String s, String s1) {
+
+            }
+
+            @Override
+            public String onGetGameConfig(String s) {
+                return "";
             }
         });
 
@@ -98,6 +102,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onPreJoinGame(String s, int i) {
                 return true;
+            }
+
+            @Override
+            public boolean onCanStartGame(String s) {
+                return false;
             }
 
 
@@ -143,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public int onGameMusicStartPlay(int i, String s, Boolean aBoolean) {
+            public int onGameMusicStartPlay(int i, String s, boolean b) {
                 return 0;
             }
 
@@ -153,13 +162,18 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public int onGameEffectSoundStartPlay(int i, String s, Boolean aBoolean) {
+            public int onGameEffectSoundStartPlay(int i, String s, boolean b) {
                 return 0;
             }
 
             @Override
             public int onGameEffectSoundStopPlay(int i) {
                 return 0;
+            }
+
+            @Override
+            public void onGameScreenShotBaseData(String s, String s1) {
+
             }
         });
     }
